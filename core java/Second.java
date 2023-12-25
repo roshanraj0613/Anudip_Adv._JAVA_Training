@@ -1,6 +1,9 @@
 public class Second {
 
         public static void main(String[] args) {
-            System.out.println("Roshan raj");
+            int x = 5;
+            int y = 6;
+            int z = x + y;
+            System.out.println(z);
         }
 }

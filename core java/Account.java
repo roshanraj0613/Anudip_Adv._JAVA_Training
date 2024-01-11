@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+// abstract class
 abstract class Account {
     String accountNumber;
     String accountHolderName;
@@ -7,11 +8,13 @@ abstract class Account {
     String contact;
     double balance;
 
+    // constructor
     Account() {
         inputData();
         initializeBalance();
     }
 
+    // method
     void inputData() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter account number:");
@@ -46,6 +49,7 @@ abstract class Account {
     abstract void withdraw();
 }
 
+// inheritance
 class SavingAccount extends Account {
     void deposit() {
         Scanner scanner = new Scanner(System.in);
@@ -54,6 +58,8 @@ class SavingAccount extends Account {
         balance += amount;
     }
 
+    // overriding
+
     void withdraw() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter amount to withdraw (InRupees):");
@@ -65,7 +71,7 @@ class SavingAccount extends Account {
         }
     }
 }
-
+// inheritance
 class CurrentAccount extends Account {
     void deposit() {
         Scanner scanner = new Scanner(System.in);
@@ -73,7 +79,10 @@ class CurrentAccount extends Account {
         double amount = scanner.nextDouble();
         balance += amount;
     }
-
+    // overriding
+    // method signature must be same
+    // method body must be different
+    // return type must be same
     void withdraw() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter amount to withdraw (InRupees):");
@@ -86,7 +95,7 @@ class CurrentAccount extends Account {
     }
 }
 
-class Main {
+class AccountExample {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Select account type (1 for Saving, 2 for Current):");

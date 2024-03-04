@@ -45,7 +45,7 @@ public class Book {
     }
 }
 
-class Main {
+class Main2 {
     public static void main(String[] args) {
         // Creating a LinkedHashMap
         Map<Integer, Book> bookMap = new LinkedHashMap<>();
